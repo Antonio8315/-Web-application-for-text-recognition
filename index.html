@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Розпізнавання тексту</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Веб-додаток для розпізнавання тексту</h1>
+    <h1>Завантажити зображення</h1>
+
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+
+        <!-- Drag-and-drop зона -->
+        <div id="dropArea">
+            <p>Перетягніть фото сюди або натисніть, щоб вибрати</p>
+            <img id="preview" src="" alt="" style="display:none;">
+        </div>
+
+        <!-- Прихований input -->
+        <input id="imageInput" type="file" name="image" accept="image/*" required hidden>
+
+        <button type="submit">Розпізнати</button>
+        <button id="clearBtn" style="display:none;">Видалити зображення</button>
+
+        <p id="result"></p>
+        <button id="copyBtn" style="display:none;">Скопіювати</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
